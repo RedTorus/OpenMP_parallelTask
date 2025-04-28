@@ -13,18 +13,18 @@ void test_routine(double* a, int N)
       a[i*N+i] = sqrt(a[i*N+i]);
 
       for (int j = i+1; j <N; ++j)
-	{
-	  a[j*N+i] = a[j*N+i] / a[i*N+i];
-	}
+      {
+        a[j*N+i] = a[j*N+i] / a[i*N+i];
+      }
 
       
       for (int j = i + 1; j < N; ++j)
-	{
-	  for (int k = i+1; k <= j; ++k)
-	    {
-	      a[j*N+k] -= a[j*N+i]*a[k*N+i];
-	    }
-	}
+      {
+        for (int k = i+1; k <= j; ++k)
+          {
+            a[j*N+k] -= a[j*N+i]*a[k*N+i];
+          }
+      }
       
     }
  
